@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "llm-learn-test"
+version = "0.1.0"
+description = "KoELECTRA-based continue/terminate classifier"
+authors = ["TP9NS <pshccxx@gmail.com>"]
+readme = "README.md"
+package-mode = false
+# Python 버전 명시 (Poetry는 requires-python 대신 이렇게!)
+[tool.poetry.dependencies]
+python = "^3.12"
+torch = { version = "2.2.2", source = "pytorch-gpu" }
+torchvision = "0.17.2"
+torchaudio = "2.2.2"
+transformers = "^4.40.0"
+datasets = "^2.19.0"
+scikit-learn = "^1.4.1"
+accelerate = "0.27.2"
+numpy = "<2"
+safetensors = "0.4.2"
+evaluate = "^0.4.5"
+
+[[tool.poetry.source]]
+name = "pytorch-gpu"
+url = "https://download.pytorch.org/whl/cu121"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
