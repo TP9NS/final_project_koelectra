@@ -2,12 +2,12 @@ from transformers import ElectraTokenizer, ElectraForSequenceClassification
 import torch
 
 # 1. 모델/토크나이저 로드
-model = ElectraForSequenceClassification.from_pretrained("saved_model_ver1")
-tokenizer = ElectraTokenizer.from_pretrained("saved_model_ver1")
+model = ElectraForSequenceClassification.from_pretrained("saved_model_ver2")
+tokenizer = ElectraTokenizer.from_pretrained("saved_model_ver2")
 
 # 2. 예측하고 싶은 문장
-question = "문제해결 경험이 있나요?"
-answer = "저는 문제를 맞닥들이면 그 문제만 보고 무조건 해결하려고 합니다."
+question = "최신 AI 기술을 적용한 프로젝트에서 실제 문제를 해결하는 경험은 있는가?"
+answer = "히히히히 똥!"
 
 # 3. 전처리
 inputs = tokenizer(
